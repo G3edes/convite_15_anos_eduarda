@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Presentes - Eduarda Guedes 15 Anos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --pink: #F7DCE7;
+            --white: #FFFFFF;
+            --gold: #D9B16E;
+            --dark-gold: #b38f5a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Playfair Display', serif;
+        }
+
+        body {
+            background-color: var(--pink);
+            background-image: url('bela e fera dioa.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid var(--gold);
+            pointer-events: none;
+            z-index: 1000;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(217, 177, 110, 0.3);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .crown {
+            font-size: 40px;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 5rem;
+            color: white;
+            margin: 20px 0;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 
+                         0 0 20px rgba(255, 255, 255, 0.5),
+                         2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: white;
+            letter-spacing: 3px;
+            margin: 10px 0 30px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        .gifts-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .gift-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--gold);
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .gift-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .gift-icon {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .gift-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .gift-description {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .pix-section {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--gold);
+            border-radius: 8px;
+            padding: 30px;
+            max-width: 600px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .pix-icon {
+            font-size: 2.5rem;
+            color: #32BCAD;
+            margin-bottom: 15px;
+        }
+
+        .pix-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .pix-key {
+            background: #f8f8f8;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            word-break: break-all;
+            margin: 15px 0;
+            border: 1px dashed #ddd;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 25px;
+            background: var(--gold);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background: var(--dark-gold);
+            transform: translateY(-2px);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .gifts-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="crown">
+                <i class="fas fa-crown"></i>
+            </div>
+            <h1>Lista de Presentes</h1>
+            <div class="subtitle">Eduarda Silva Guedes - 15 Anos</div>
+        </header>
+
+        <div class="gifts-container">
+            <div class="gift-card">
+                <div class="gift-icon">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <h3 class="gift-title">Pratas</h3>
+                <p class="gift-description">Acessórios em prata para complementar o look</p>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-icon">
+                    <i class="fas fa-spray-can"></i>
+                </div>
+                <h3 class="gift-title">Perfumes</h3>
+                <p class="gift-description">Fragrâncias especiais para momentos únicos</p>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-icon">
+                    <i class="fas fa-spa"></i>
+                </div>
+                <h3 class="gift-title">Body Splash</h3>
+                <p class="gift-description">Toque suave e aroma doce para o dia a dia</p>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-icon">
+                    <i class="fas fa-pump-soap"></i>
+                </div>
+                <h3 class="gift-title">Creme</h3>
+                <p class="gift-description">Hidratantes para manter a pele macia e perfumada</p>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3 class="gift-title">Maquiagens</h3>
+                <p class="gift-description">Itens de maquiagem para realçar a beleza</p>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-icon">
+                    <i class="fas fa-tshirt"></i>
+                </div>
+                <h3 class="gift-title">Roupas</h3>
+                <p class="gift-description">Calça tamanho 36 e blusas P ou M</p>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-icon">
+                    <i class="fas fa-shoe-prints"></i>
+                </div>
+                <h3 class="gift-title">Calçados</h3>
+                <p class="gift-description">Número 37 ou 38</p>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <h3 class="gift-title">Outros Presentes</h3>
+                <p class="gift-description">Sua criatividade e carinho são sempre bem-vindos!</p>
+            </div>
+        </div>
+
+        <div class="pix-section">
+            <div class="pix-icon">
+                <i class="fab fa-pix"></i>
+            </div>
+            <h3 class="pix-title">Presente em Dinheiro via PIX</h3>
+            <p>Se preferir presentear em dinheiro, utilize a chave PIX abaixo:</p>
+            <div class="pix-key">
+                568.538.368-12 (CPF)
+            </div>
+            <p>Muito obrigada pelo carinho! 💕</p>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Voltar ao Convite
+            </a>
+        </div>
+    </div>
+</body>
+</html>
